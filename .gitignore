@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+
+# Data warehouse
+data/warehouse/
+
+# Database files
+*.duckdb
+
+# Parquet data
+*.parquet
+
+# Environment variables
+.env
