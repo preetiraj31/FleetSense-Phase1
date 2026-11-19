@@ -18,8 +18,9 @@ city_query = queries[1]
 
 @st.cache_data
 def load_data(query):
-    with duckdb.connect(DB_PATH) as conn:
-        return conn.execute(query).df()
+    with duckdb.connect(DB_PATH, read_only=True) as conn:
+        return conn.execute(query).fetchdf()
+
 
 airport_df = load_data(airport_query)
 city_df = load_data(city_query)
